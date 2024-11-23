@@ -1,0 +1,53 @@
+.player-data {
+    color: white;
+    height: 50px;
+    padding: 0px 16px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    & .name {
+        flex-basis: 0;
+        flex-grow: 2.3;
+    }
+    & .role {
+        flex-basis: 0;
+        flex-grow: 2;
+        display: flex;
+        & .lock {
+            padding: 0 4px;
+        }
+        & .rolename {
+            flex-basis: 0;
+            flex-grow: 2;
+        }
+    }
+    & .life {
+        flex-basis: 0;
+        flex-grow: 1;
+        text-align: end;
+        &.dead {
+            &::after {
+                content: '💀'
+            }
+        }
+    }
+}
+
+.playerList {
+    & > * {
+        margin-bottom: 5px;
+    }
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h1, h2 {
+    color: #0F0;
+}
+
+body {
+    background-color: #222;
+}
